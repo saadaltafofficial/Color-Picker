@@ -1,12 +1,36 @@
 let colors = []
 const allColors = document.getElementById('all-colors')
+const btn = document.getElementById('btn')
 
-fetch("https://www.thecolorapi.com/scheme?hex=FF0&mode=monochrome&count=5")
-.then(res => res.json())
-.then(data => {
+async function handleRequest(hex, mode) {
+    const res = await fetch(`https://www.thecolorapi.com/scheme?hex=${hex}&mode=${mode}&count=8`)
+    const data = await res.json()
     console.log(data)
     colors = data.colors
-    colors.forEach((col) => {
-        allColors.innerHTML += `<div>${col.hex.value}</div>`
-    })
+    console.log(colors) 
+    
+    allColors.innerHTML = ""
+    
+    colors.forEach((color) => {
+        allColors.innerHTML += `
+        <div class="imageContainer">
+            <img src="${color.image.bare}" alt="color Image"/>
+            <span>${color.hex.value}</span>
+        </div>
+        `
+    });
+}
+
+function loadColor() {
+    const inputSelection = document.getElementById('ColorsOption').value
+    const colorIput = document.getElementById('colorInput').value
+    const colorValue = colorIput.replace("#", "") 
+    handleRequest(colorValue, inputSelection)
+}
+
+btn.addEventListener('click', (e) => {
+    e.preventDefault()  
+    loadColor()  
 })
+
+loadColor()
