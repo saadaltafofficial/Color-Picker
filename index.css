@@ -53,12 +53,11 @@ nav {
 .all-colors{
     display: grid;
     grid-template-columns: repeat(8,1fr);
-    border-bottom: 2px solid lightgray;
 }
 
 
 .imageContainer img {
-    height: 82.6vh;
+    height: 70vh;
     width: 100%;
 }
 
@@ -67,15 +66,37 @@ nav {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+    
 }
 .imageContainer span {
+    width: 100%;
+    border-bottom: 2px solid lightgray;
+    border-top: 2px solid lightgray;
     background-color: white;
     padding: .5em 0;
+    text-align: center;
 }
 
 label {
     display: block;
+    margin-bottom: 5px;
+}
+
+.btn:hover {
+    background-color: lightgray
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+footer p {
+    margin: 2em 0;
+}
+
+footer a {
+    text-decoration: none;
 }
 
 
