@@ -5,9 +5,7 @@ const btn = document.getElementById('btn')
 async function handleRequest(hex, mode) {
     const res = await fetch(`https://www.thecolorapi.com/scheme?hex=${hex}&mode=${mode}&count=8`)
     const data = await res.json()
-    console.log(data)
     colors = data.colors
-    console.log(colors) 
     
     allColors.innerHTML = ""
     
