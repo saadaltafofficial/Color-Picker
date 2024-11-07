@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    padding: 2em 1em;
+}
+
+nav {
+    display: flex;
+    gap: 1em;
+}
+.selectionInput{
+    width: 60%;
+    height: 5vh;
+    padding: .2em;
+    border: none;
+    box-shadow: 2px 2px 1px lightgray;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.colorInput, .btn {
+    width: 20%;
+    height: 5vh;
+    padding: .2em;
+    border: none;
+    box-shadow: 2px 2px 1px lightgray;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: red;
+    flex-wrap: wrap;
+}
+
+#all-colors {
+    display: flex;
+    justify-content: space-between;
+    gap: 3em;
+}

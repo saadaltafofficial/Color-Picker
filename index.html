@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <input class="colorInput" type="color" id="colorInput" value="#F55A5A">
+            <select class="selectionInput" name="colors" id="ColorsOption">
+                <option value="Monochrome">Monochrome</option>
+                <option value="Monochrome-dark">Monochrome-dark</option>
+                <option value="Monochrome-light">Monochrome-light</option>
+                <option value="Analogic">Analogic</option>
+                <option value="Complement">Complement</option>
+                <option value="Analogic-complement">Analogic-complement</option>
+                <option value="Traid">Traid</option>
+              </select>
+            <button class="btn">Get color scheme</button>
+        </nav>
+    </header>
+    <main>
+        <div id="all-colors"></div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
